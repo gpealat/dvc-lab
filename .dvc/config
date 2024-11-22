@@ -1,6 +1,7 @@
 [core]
-    remote = myremote1
-['remote "myremote"']
-    url = /temp/dvc-storage
-['remote "myremote1"']
-    url = c:/temp/dvc-storage
+    remote = wasabi
+['remote "wasabi"']
+    url = s3://test-bucket-dvc
+    access_key_id = TQG1YD5KJ5WDUVDJQ2GD
+    secret_access_key = hVtzJEIn5ejr4ieG9MB3kQVIsnfeCgWf4eBJBzk3
+    endpointurl = https://s3.eu-central-1.wasabisys.com
