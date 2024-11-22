@@ -37,3 +37,30 @@ To follow up, you have to do the command:
 git add .gitignore mydata.csv.dvc
 ```
 
+### Listing the data from a repository
+
+With DVC you can list the data from a github repo even if the data are stored somewhere else.
+
+```
+dvc list https://github.com/myrepo myfolder
+```
+
+You will have a list of the data files and the dvc files.
+
+### Getting the data from a repo
+
+```
+dvc get https://github.com/myrepo myfolder
+```
+The downside of dvc get is you lose track of the origin of the file.
+To keep track about the source of the data, you can use import instead
+
+```
+dvc import https://github.com/myrepo myfolder/myfile.csv -o myfile.csv
+```
+
+Once you have loaded the data, you can check if there is an update
+
+```
+dvc update myfile.csv.dvc
+```
