@@ -22,3 +22,18 @@ dvc push [Optional --remote to select the remote you want]
 ```
 dvc pull [Optional --remote to select the remote you want]
 ```
+
+### Adding data to dvc
+
+To add data, just type the command
+```
+dvc add mydata
+```
+
+DVC will then update the .gitignore file so the data are not saved in github
+
+To follow up, you have to do the command:
+```
+git add .gitignore mydata.csv.dvc
+```
+
